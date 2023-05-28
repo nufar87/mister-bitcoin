@@ -1,0 +1,31 @@
+.user-preview {
+    margin-block-start: 20px;
+    margin-inline: auto;
+    width: clamp(300px, 90%, 800px);
+    border-radius: 2em;
+    display: flow-root;
+    background-color: #9992;
+    h2 {
+        padding: 20px  20px 10px 20px;
+        border-bottom: 2px solid #9992;
+    }
+    .user-info {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        gap: 15px;
+        padding-inline: 10px;
+        &:not(:last-child) {
+            border-bottom: 2px solid #9992;
+        }
+        img {
+            height: 60px;
+            width: 60px;
+        }
+        h5 {
+            font-size: 1.4em;
+            display: flex;
+            gap: 3px;
+        }
+    }
+}

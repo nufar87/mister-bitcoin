@@ -1,0 +1,48 @@
+.main-header {
+    background-color: $dark-01;
+}
+
+header {
+    align-items: center;
+    min-height: 100px;
+    position: relative;
+    .logo {
+        font-size: em(40px);
+        font-family: poppinsBlack;
+        letter-spacing: 0.5px;
+        background: linear-gradient(45deg, $clr1, $clr4, darken($clr3, 22%),$clr2 );
+        background-clip: text;
+        text-shadow: 0 10px 10px $dark-03;
+        background-position: 0%;
+        background-size: 400%;
+        color: transparent;
+
+        animation: logo 18s linear infinite;
+    }
+    nav {
+        a {
+            color: $clr2;
+            height: 100px;
+            width: 100px;
+            display: grid;
+            place-content: center;
+            transition: 0.3s;
+            font-family: poppins;
+            cursor: pointer;
+            &.active {
+                // background-color: #eee5;
+                font-size: 1.5em;
+                color: $clr3;
+            }
+        }
+    }
+}
+
+@keyframes logo {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}

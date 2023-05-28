@@ -1,0 +1,32 @@
+.move-list {
+    margin-block-start: 40px;
+    max-height: 450px;
+    overflow-y: auto;
+    width: 90%;
+    margin-inline: auto;
+}
+
+.move-preview {
+    &.transfer {
+        box-shadow: 0 0 3px 1px #3335;
+        background-color: #3331;
+        background: linear-gradient(to left, $clr1, $clr3);
+        text-transform: capitalize;
+    }
+    margin-block-start: 10px;
+    height: 140px;
+    text-align: center;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    place-content: center;
+    h2 {
+        font-size: rem(20px);
+        line-height: 140px;
+        &.amount {
+            font-size: rem(40px);
+            background-size: 128px 128px;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.transfer-funds {
+    margin-block-start: 80px;
+    text-align: center;
+    padding: 30px;
+    h2 {
+        margin-block: 20px;
+    }
+    form {
+        display: flow-root;
+        & * {
+            margin-inline: 5px;
+        }
+        input {
+            // background-color: transparent;
+            border: none;
+            outline: none;
+            color: $dark;
+            box-shadow: 0 1px 0 #333;
+            padding-inline-start: 5px;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        button {
+            background-color: $dark;
+            font-family: poppins, sans-serif;
+            border: 1px solid #333;
+            border-radius: 4px;
+            position: relative;
+            height: 36px;
+            width: 90px;
+            letter-spacing: 0.07em;
+            transition: .2s;
+
+            overflow: hidden;
+            &::before {
+                overflow: hidden;
+                content: "Transfer!";
+                position: absolute;
+                background-color: $clr2;
+                color: #eee;
+                top: 0;
+                left: 0;
+                height: 36px;
+                text-align: center;
+                line-height: 36px;
+                letter-spacing: 0.07em;
+                width: 0;
+                transition: 0.2s;
+            }
+            &:hover {
+                color: transparent;
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

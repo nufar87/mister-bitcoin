@@ -1,0 +1,88 @@
+.contact-edit {
+    h1 {
+        text-align: center;
+        font-size: 2.4em;
+        font-family: poppinsBlack;
+        margin-block: 20px;
+    }
+    .edit-form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        background-color: #3331;
+        box-shadow: 2px 2px 6px #3333;
+        margin-inline: auto;
+        width: 400px;
+        padding: 45px 40px;
+        border-radius: 24px;
+        font-size: 1.2em;
+        label {
+            display: flex;
+            width: 100%;
+            gap: 12px;
+            span {
+                width: 48px;
+            }
+            input {
+                flex: 1;
+                color: #eee;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $clr2;
+                transition: 0.2s;
+                padding-inline-start: 6px;
+
+                &:focus {
+                    box-shadow: -2px 2px $clr3;
+                }
+            }
+        }
+        button,
+        .delete {
+            margin-block-start: 24px;
+            width: 100%;
+            padding-block: 8px;
+            border-radius: 2em;
+            font-size: 1.3em;
+            transition: 0.3s;
+            text-align: center;
+            background-color: #eee;
+            color: #333;
+            &:hover {
+                background-color: $clr2;
+                color: #eee;
+            }
+        }
+        .delete {
+            margin-block: 0;
+            &:hover {
+                background-color: $clr3;
+                color: $light;
+            }
+        }
+        .form-back {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -50px;
+            border-radius: 50%;
+            background-color: #333;
+            height: 30px;
+            width: 30px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 45%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-right: 12px solid #eee;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+            }
+        }
+    }
+}

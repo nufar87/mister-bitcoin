@@ -1,0 +1,61 @@
+.contact-list {
+    margin-block: 10px;
+    .contact-preview {
+        align-items: center;
+        height: 100px;
+        border-radius: 200px;
+        overflow: hidden;
+        gap: 10px;
+        margin-block: 15px;
+        background-color: #3331;
+        transition: 0.3s;
+        cursor: pointer;
+        h2 {
+            font-family: poppins;
+            margin-inline-start: 10px;
+        }
+        img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin-inline-start: 5px;
+            background: #eee3;
+        }
+        &:hover {
+            // position: absolute;
+            background-color: #373737;
+            transform: translateY(0) scale(1.05);
+            & .actions {
+                opacity: 1 ;
+            }
+        }
+        .actions {
+            margin-inline: auto 5%;
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: .3s;
+            & > a:hover{
+                color: $clr2;
+            }
+        }
+    }
+}
+
+.add-contact {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 4.5em;
+    color: #9997;
+    box-shadow: 2.5px 2.5px #9995;
+    display: grid;
+    place-content: center;
+    transition: .2s;
+    &:hover{
+        color: $clr2;
+    }
+}
